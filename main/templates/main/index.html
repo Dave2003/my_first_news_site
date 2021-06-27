@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Hello facking{% endblock %}
+
+{% block content %}
+<h3>{{ title }}</h3>
+<p>helloooooooooo</p>
+
+{% for el in values %}
+<p>{{ el }}</p>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/indexmain.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <div class="con">
+        <aside>
+            <img src="{% static 'main/img/rocket_icon_149818.ico' %}" alt="logo">
+            <span class="logo">News site</span>
+            <h3>Navigation</h3>
+            <ul>
+                <a href="{% url 'home' %}">
+                    <li><i class="fas fa-home"></i>Main</li>
+                </a>
+                <a href="{% url 'about' %}">
+                    <li><i class="fas fa-home"></i>About</li>
+                </a>
+                <a href="{% url 'news' %}">
+                    <li><i class="fas fa-home"></i>News</li>
+                </a>
+                <a href="">
+                    <li><i class="fas fa-home"></i>Contact</li>
+                </a>
+                <a href="{% url 'create' %}">
+                    <li><button class="btn btn-info"><i class="fas fa-home"></i>Add something</button></li>
+                </a>
+            </ul>
+        </aside>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+</body>
+
+</html>

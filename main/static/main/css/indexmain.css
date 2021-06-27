@@ -1,0 +1,23 @@
+.con {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: rgb(250, 248, 242);
+}
+
+body {
+    background-color: rgb(92, 92, 92);
+    color: rgb(248, 247, 244);
+}
+
+aside {
+    width: 30%;
+}
+
+main {
+    width: 70%;
+}
